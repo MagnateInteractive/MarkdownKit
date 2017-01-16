@@ -16,6 +16,7 @@ open class MarkdownHeader: MarkdownLevelElement {
   open var font: UIFont?
   open var color: UIColor?
   open var fontIncrease: Int
+  open var paragraphStyle: NSMutableParagraphStyle?
 
   open var regex: String {
     let level: String = maxLevel > 0 ? "\(maxLevel)" : ""
@@ -39,6 +40,9 @@ open class MarkdownHeader: MarkdownLevelElement {
     if let font = font {
       let headerFontSize: CGFloat = font.pointSize + (CGFloat(level) * CGFloat(fontIncrease))
       attributes[NSFontAttributeName] = font.withSize(headerFontSize)
+    }
+    if (self.paragraphStyle != nil) {
+        attributes[NSParagraphStyleAttributeName] = self.paragraphStyle
     }
     return attributes
   }
