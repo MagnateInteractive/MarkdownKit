@@ -72,6 +72,15 @@ open class MarkdownParser {
     }
     customElements.remove(at: index)
   }
+    
+  open func removeDefaultElement(_ element: MarkdownElement) {
+    guard let index = defaultElements.index(where: { someElement -> Bool in
+      return element === someElement
+    }) else {
+      return
+    }
+    defaultElements.remove(at: index)
+  }
 
   // MARK: Parsing
   open func parse(_ markdown: String) -> NSAttributedString {
