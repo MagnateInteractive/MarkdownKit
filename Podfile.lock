@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (5.0.0.beta.1)
+  - MarkdownKit (1.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0.beta.1)
+  - MarkdownKit (from `.`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  MarkdownKit:
+    :path: "."
+
+SPEC CHECKSUMS:
+  Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
+  MarkdownKit: 379028e9cd3ebf05ccac87205cd9aead446159d4
+
+PODFILE CHECKSUM: f7d262aa3fe12d8080e47f956736b75f868ec2e7
+
+COCOAPODS: 1.6.1

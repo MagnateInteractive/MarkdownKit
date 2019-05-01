@@ -6,20 +6,20 @@
 //
 //
 
-import UIKit
+import Foundation
 
 open class MarkdownCode: MarkdownCommonElement {
 
   fileprivate static let regex = "(\\`{1})(.+?)(\\`{1})"
 
-  open var font: UIFont?
-  open var color: UIColor?
+  open var font: MarkdownFont?
+  open var color: MarkdownColor?
 
   open var regex: String {
     return MarkdownCode.regex
   }
 
-  public init(font: UIFont? = nil, color: UIColor? = nil) {
+  public init(font: MarkdownFont? = nil, color: MarkdownColor? = nil) {
     self.font = font
     self.color = color
   }
